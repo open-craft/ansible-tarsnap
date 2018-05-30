@@ -63,7 +63,7 @@
 
 - name: Build and install Tarsnap
   when: tarnsap_installed|failed
-  command: make all install clean chdir=/root/tarsnap-autoconf-{{ tarsnap_version }} creates=/usr/local/bin/tarsnap
+  command: make all install clean chdir=/root/tarsnap-autoconf-{{ tarsnap_version }}
 
 - name: Create Tarsnap cache directory
   file: state=directory path={{ tarsnap_cache }}
